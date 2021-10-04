@@ -10,6 +10,8 @@ param(
     [string]$azureRegion
 )
 
+az cloud set --name AzureUSGovernment
+
 az login -u $azureUsername -p $azurePassword 
 
 #Create a SQL Server
