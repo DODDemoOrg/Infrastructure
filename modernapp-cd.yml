@@ -63,7 +63,7 @@ stages:
          inputs:
            TaskType: 'sqlQuery'
            SqlFile: '$(Build.SourcesDirectory)\TestData.sql'
-           ServerName: '$(sqlServerName).database.windows.net'
+           ServerName: '$(sqlServerName).database.usgovcloudapi.net'
            DatabaseName: '$(databaseName)'
            AuthScheme: 'sqlServerAuthentication'
            SqlUsername: '$(sqlServerUsername)'
@@ -144,7 +144,7 @@ stages:
          inputs:
            TaskType: 'sqlQuery'
            SqlFile: '$(Build.SourcesDirectory)\TestData.sql'
-           ServerName: '$(sqlServerName).database.windows.net'
+           ServerName: '$(sqlServerName).database.usgovcloudapi.net'
            DatabaseName: '$(databaseName)'
            AuthScheme: 'sqlServerAuthentication'
            SqlUsername: '$(sqlServerUsername)'
