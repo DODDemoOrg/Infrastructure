@@ -11,16 +11,16 @@ variables:
   azureRegion: 'usgovvirginia'
   azureContainerRegistryName: '$(mySuffix)acr'
   ring0ApiAppDns: modernapi-ring0-$(mySuffix)
-  ring0CustomerApiUrl: "http://$(ring0ApiAppDns).$(azureRegion).azurecontainer.io/api/customers"
+  ring0CustomerApiUrl: "http://$(ring0ApiAppDns).$(azureRegion).azurecr.us/api/customers"
   rin0apiContainerName: modernapi-ring0
   ring0UIAppDns: modernui-ring0-$(mySuffix)
-  ring0CustomerUIUrl: "http://$(ring0UIAppDns).$(azureRegion).azurecontainer.io/customers"
+  ring0CustomerUIUrl: "http://$(ring0UIAppDns).$(azureRegion).azurecr.us/customers"
   ring0uiContainerName: modernui-ring0
   ring1ApiAppDns: modernapi-ring1-$(mySuffix)
-  ring1CustomerApiUrl: "http://$(ring1ApiAppDns).$(azureRegion).azurecontainer.io/api/customers"
+  ring1CustomerApiUrl: "http://$(ring1ApiAppDns).$(azureRegion).azurecr.us/api/customers"
   ring1apiContainerName: modernapi-ring1
   ring1UIAppDns: modernui-ring1-$(mySuffix)
-  ring1CustomerUIUrl: "http://$(ring1UIAppDns).$(azureRegion).azurecontainer.io/customers"
+  ring1CustomerUIUrl: "http://$(ring1UIAppDns).$(azureRegion).azurecr.us/customers"
   ring1uiContainerName: modernui-ring1
 
 pool:
