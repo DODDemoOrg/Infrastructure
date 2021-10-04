@@ -4,12 +4,12 @@ name: ModernApp-$(Date:yyyyMMdd)$(Rev:.r)
 trigger: none
 
 variables:
-  mySuffix: '********'
-  resourceGroup: 'holDevTestRGlod$(mySuffix)'
-  azureUsername: 'Student1-$(mySuffix)@lodsasdoutlook.onmicrosoft.com'
-  azurePassword: '********'
-  azureRegion: 'eastus'
-  azureContainerRegistryName: 'acrlod$(mySuffix)'
+  mySuffix: 'CNSTRA'
+  resourceGroup: '$(mySuffix)_RMGroup'
+  azureUsername: 'jospinel@fieldinternaltrials.onmicrosoft.com'
+  azurePassword: 'Normandy229!'
+  azureRegion: 'usgovvirginia'
+  azureContainerRegistryName: 'ACR$(mySuffix)'
   ring0ApiAppDns: modernapi-ring0-$(mySuffix)
   ring0CustomerApiUrl: "http://$(ring0ApiAppDns).$(azureRegion).azurecontainer.io/api/customers"
   rin0apiContainerName: modernapi-ring0
