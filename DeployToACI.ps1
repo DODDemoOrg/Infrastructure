@@ -14,6 +14,8 @@ param(
 
 )
 
+az cloud set --name AzureUSGovernment
+
 az login -u $azureUsername -p $azurePassword 
 
 $acrUsername=az acr credential show --name $containerRegistry --resource-group $resourceGroup --query username 
