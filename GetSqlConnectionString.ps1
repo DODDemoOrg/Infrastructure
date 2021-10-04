@@ -7,6 +7,8 @@ param(
     [parameter(Mandatory,ValueFromPipeline)][ref]$sqlConnectionString
 )
 
+az cloud set --name AzureUSGovernment
+
 az login -u $azureUsername -p $azurePassword 
 
 $sqlConnectionString.Value = az sql db show-connection-string --server $sqlServerName --name $databaseName --client ado.net
