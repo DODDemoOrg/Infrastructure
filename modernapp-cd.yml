@@ -38,13 +38,13 @@ stages:
        sqlServerPassword: 'Micrsoft2018!1'
        databaseName: 'apidb-ring0'
        sqlConnectionString: 'Server=tcp:$(sqlServerName).database.windows.net,1433;Initial Catalog=$(databaseName);Persist Security Info=False;User ID=$(sqlServerUsername);Password=$(sqlServerPassword);MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;'
-       apiContainerImage: '$(azureContainerRegistryName).azurecr.io/modernapi:Latest'
+       apiContainerImage: '$(azureContainerRegistryName).azurecr.us/modernapi:Latest'
        apiContainerOsType: Windows
        apiContainerCpus: 3
        apiContainerMemory: 3.5
        apiAppPort: 80
        apiAppEnvironmentVariables: "ModernApiDBConnectionString=$(sqlConnectionString)"
-       uiContainerImage: '$(azureContainerRegistryName).azurecr.io/modernui:Latest'
+       uiContainerImage: '$(azureContainerRegistryName).azurecr.us/modernui:Latest'
        uiContainerOsType: Windows
        uiContainerCpus: 3
        uiContainerMemory: 3.5
