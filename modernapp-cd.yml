@@ -9,7 +9,7 @@ variables:
   azureUsername: 'jospinel@fieldinternaltrials.onmicrosoft.com'
   azurePassword: 'Normandy229!'
   azureRegion: 'usgovvirginia'
-  azureContainerRegistryName: 'ACR$(mySuffix)'
+  azureContainerRegistryName: '$(mySuffix)acr'
   ring0ApiAppDns: modernapi-ring0-$(mySuffix)
   ring0CustomerApiUrl: "http://$(ring0ApiAppDns).$(azureRegion).azurecontainer.io/api/customers"
   rin0apiContainerName: modernapi-ring0
