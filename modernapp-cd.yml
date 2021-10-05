@@ -40,13 +40,13 @@ stages:
        sqlConnectionString: 'Server=tcp:$(sqlServerName).database.windows.net,1433;Initial Catalog=$(databaseName);Persist Security Info=False;User ID=$(sqlServerUsername);Password=$(sqlServerPassword);MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;'
        apiContainerImage: '$(azureContainerRegistryName).azurecr.us/modernapi:Latest'
        apiContainerOsType: Windows
-       apiContainerCpus: 3
+       apiContainerCpus: 2
        apiContainerMemory: 3.5
        apiAppPort: 80
        apiAppEnvironmentVariables: "ModernApiDBConnectionString=$(sqlConnectionString)"
        uiContainerImage: '$(azureContainerRegistryName).azurecr.us/modernui:Latest'
        uiContainerOsType: Windows
-       uiContainerCpus: 3
+       uiContainerCpus: 2
        uiContainerMemory: 3.5
        uiAppPort: 80
        uiAppEnvironmentVariables: "ApiURL=$(ring0CustomerApiUrl)"
