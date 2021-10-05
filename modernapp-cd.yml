@@ -12,7 +12,7 @@ variables:
   azureContainerRegistryName: '$(mySuffix)acr'
   ring0ApiAppDns: modernapi-ring0-$(mySuffix)
   ring0CustomerApiUrl: "http://$(ring0ApiAppDns).$(azureRegion).azurecr.us/api/customers"
-  rin0apiContainerName: modernapi-ring0
+  ring0apiContainerName: modernapi-ring0
   ring0UIAppDns: modernui-ring0-$(mySuffix)
   ring0CustomerUIUrl: "http://$(ring0UIAppDns).$(azureRegion).azurecr.us/customers"
   ring0uiContainerName: modernui-ring0
@@ -73,7 +73,7 @@ stages:
          inputs:
           targetType: 'filePath' 
           filePath: DeployToACI.ps1
-          arguments: -resourceGroup $(resourceGroup) -azureUsername '$(azureUsername)' -azurePassword '$(azurePassword)' -azureRegion $(azureRegion) -containerName $(rin0apiContainerName) -containerImage $(apiContainerImage) -osType $(apiContainerOsType) -memory $(apiContainerMemory) -appDns $(ring0ApiAppDns) -environmentVariables '$(apiAppEnvironmentVariables)' -cpus '$(apiContainerCpus)' -appPort '$(apiAppPort)' -containerRegistry '$(azureContainerRegistryName)'
+          arguments: -resourceGroup $(resourceGroup) -azureUsername '$(azureUsername)' -azurePassword '$(azurePassword)' -azureRegion $(azureRegion) -containerName $(ring0apiContainerName) -containerImage $(apiContainerImage) -osType $(apiContainerOsType) -memory $(apiContainerMemory) -appDns $(ring0ApiAppDns) -environmentVariables '$(apiAppEnvironmentVariables)' -cpus '$(apiContainerCpus)' -appPort '$(apiAppPort)' -containerRegistry '$(azureContainerRegistryName)'
        - task: Powershell@2
          displayName: Deploy the ui container
          inputs:
